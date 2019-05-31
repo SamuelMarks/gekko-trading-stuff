@@ -1,47 +1,27 @@
-# gekko-trading-stuff
-A dumping ground for my files I use with this awesome crypto currency trading platform https://github.com/askmike/gekko
+# Gekko [![npm](https://img.shields.io/npm/dm/gekko.svg)]() [![Build Status](https://travis-ci.org/askmike/gekko.png)](https://travis-ci.org/askmike/gekko) [![Build status](https://ci.appveyor.com/api/projects/status/github/askmike/gekko?branch=stable&svg=true)](https://ci.appveyor.com/project/askmike/gekko)
 
-******************************************************************************************************************************
-Indicators:
-Place the indicators into the Strategies / Indicators folder then reference them inside your strategy. 
+![Gordon Gekko](http://mikevanrossum.nl/static/gekko.jpg)
 
-TWIG.js
-This is a TWIGs indicator based on https://www.incrediblecharts.com/indicators/twiggs_money_flow.php
+*The most valuable commodity I know of is information.*
 
-FIBO.js
-This is a fibonnaci retracement indicator that works out the fib levels. 
+-Gordon Gekko
 
+Gekko is a Bitcoin TA trading and backtesting platform that connects to popular Bitcoin exchanges. It is written in JavaScript and runs on [Node.js](http://nodejs.org).
 
-******************************************************************************************************************************
-The genetic algo may not work with latest Gekko versions, key is to update the json passed:
-Run-ga.js
+*Use Gekko at your own risk.*
 
-Run server.js, run-ga.js is going to connect to this via posts.
+## Documentation
 
-Then run run-ga.js.
+See [the documentation website](https://gekko.wizb.it/docs/introduction/about_gekko.html).
 
-Inside you will need to set up the strat, the config section and...var properites is where you set up the genes.
+## Installation & Usage
 
+See [the installing Gekko doc](https://gekko.wizb.it/docs/installation/installing_gekko.html).
 
-Writing CSV of strat output candles
+## Community & Support
 
-Install fs
+Gekko has [a forum](https://forum.gekko.wizb.it/) that is the place for discussions on using Gekko, automated trading and exchanges. In case you rather want to chat in realtime about Gekko feel free to join the [Gekko Support Discord](https://discord.gg/26wMygt).
 
-Add this to the top of the strat:
-var fsw = require('fs');
+## Final
 
-
-
-Add this in .check under your logic etc I've used adx as an example:
-
-  grreadtime = candle.start.toDate();
-  headertxt = "date,price,adx,buys (USD),sells (BTC)\n";
-  outtxt = grreadtime+","+ price+","+adxresult+","+buytime+","+selltime+"\n";
-
-  if(headerset==""){
-    fsw.appendFileSync(this.fname, headertxt, encoding='utf8');
-    headerset = "1";
-  }
-
-  fsw.appendFileSync(this.fname, outtxt, encoding='utf8');
-  outtxt = "";
+If Gekko helped you in any way, you can always leave me a tip at (BTC) 13r1jyivitShUiv9FJvjLH7Nh1ZZptumwW
